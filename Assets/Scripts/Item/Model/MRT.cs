@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MRT : MonoBehaviour
 {
@@ -18,12 +16,12 @@ public class MRT : MonoBehaviour
     {
         if (PlayerState.isWearingClothes)
         {
-            Face.ChangeNormalFace2();
+            FaceManager.Instance.ChangeNormalFace2();
         }
         else if (!startEnd && !PlayerState.isWearingClothes)
         {
             policeSound.Play();
-            Face.ChangeTerrifyFace();
+            FaceManager.Instance.ChangeTerrifyFace();
             PlayEndEvent();
             this.gameObject.SetActive(false);
             startEnd = false;

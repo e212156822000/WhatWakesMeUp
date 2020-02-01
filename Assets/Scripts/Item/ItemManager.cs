@@ -24,9 +24,12 @@ public class ItemManager : MonoBehaviour
     {
         if (firstClickedItem != null && secondClickedItem != null)
         {
-            CheckItemName(firstClickedItem.name, secondClickedItem.name);
+            string firstName = firstClickedItem.name;
+            string secondName = secondClickedItem.name;
+
             firstClickedItem = null;
             secondClickedItem = null;
+            CheckItemName(firstName, secondName);
         }
     }
 
@@ -37,23 +40,32 @@ public class ItemManager : MonoBehaviour
         SyntheticItem item = SyntheticTable.syntheticItems.SingleOrDefault(obj => obj.firstItemName.Equals(firstItemName) && obj.secondItemName.Equals(secondItemName));
         if (item != null && item.generateItemNames != null)
         {
-            item.itemEvents.Invoke();
-            foreach (string generateItemName in item.generateItemNames)
+            if (item.itemEvents != null)
             {
-                GenerateItem(generateItemName);
+                item.itemEvents.Invoke();
             }
-            foreach (var disappearItemName in item.disappearItemNames)
+            if (item.generateItemNames != null)
             {
-                DisableItem(disappearItemName);
+                foreach (string generateItemName in item.generateItemNames)
+                {
+                    GenerateItem(generateItemName);
+                }
             }
+            if (item.disappearItemNames != null)
+            {
+                foreach (var disappearItemName in item.disappearItemNames)
+                {
+                    DisableItem(disappearItemName);
+                }
+            }
+            SyntheticTable.syntheticItems.Remove(item);
         }
     }
 
     public void GenerateItem(string itemName)
     {
         GameObject obj = FindChildObjectByName(itemListInHierarchy, itemName);
-        Debug.Log(itemName);
-        Debug.Log(obj.name);
+        if (obj == null) return;
         obj.SetActive(true);
     }
 

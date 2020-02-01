@@ -18,13 +18,13 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Eyes,
             secondItemName = ItemNameDictionary.Face,
-            itemEvents = Face.GetFaceEvent(Face.ChangeWakeUpFace),
+            itemEvents = FaceManager.GetFaceEvent(FaceManager.Instance.ChangeWakeUpFace),
             generateItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table, ItemNameDictionary.Bed)
         },
         new SyntheticItem
         {
-            firstItemName = ItemNameDictionary.Table,
-            secondItemName = ItemNameDictionary.Eyes,
+            firstItemName = ItemNameDictionary.Eyes,
+            secondItemName = ItemNameDictionary.Table,
             generateItemNames = GetListItems(ItemNameDictionary.Document, ItemNameDictionary.Wallet, ItemNameDictionary.Phone)
         },
         new SyntheticItem
@@ -37,14 +37,14 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Clothes,
             secondItemName = ItemNameDictionary.Face,
-            itemEvents = Face.GetFaceEvent(Face.ChangeNormalFace),
+            itemEvents = FaceManager.GetFaceEvent(FaceManager.Instance.ChangeNormalFace),
             disappearItemNames = GetListItems(ItemNameDictionary.Clothes)
         },
         new SyntheticItem
         {
             firstItemName = ItemNameDictionary.Foot,
             secondItemName = ItemNameDictionary.Door,
-            itemEvents = Face.GetFaceEvent(Face.ChangeNormalFace),
+            itemEvents = FaceManager.GetFaceEvent(FaceManager.Instance.ChangeNormalFace),
             generateItemNames = GetListItems(ItemNameDictionary.Home),
             disappearItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table)
         }
