@@ -18,7 +18,7 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Eyes,
             secondItemName = ItemNameDictionary.Face,
-            generateItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.wardrobe, ItemNameDictionary.Table, ItemNameDictionary.Bed)
+            generateItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table, ItemNameDictionary.Bed)
         }
     };
 

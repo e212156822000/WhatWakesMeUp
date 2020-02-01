@@ -1,7 +1,6 @@
 ﻿public class ItemNameDictionary
 {
     public const string Face = "Face";
-
     public const string Alarm = "Alarm";
     public const string Hand = "Hand";
     public const string Foot = "Foot";
@@ -41,7 +40,7 @@
     public const string Game = "Game";
     public const string AD = "AD";
     public const string Message = "Message";
-    public const string DoneWork = "DoneWork"
+    public const string DoneWork = "DoneWork";
     public const string Project = "Project";
     public const string Dream = "Dream";
 
