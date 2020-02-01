@@ -1,20 +1,48 @@
 ﻿public class ItemNameDictionary
 {
-    public const string Face = "臉";
+    public const string Face = "Face";
 
-    public const string Alarm = "鬧鐘";
-    public const string Hand = "手";
-    public const string Foot = "腳";
-    public const string Eyes = "眼";
-    public const string Mouth = "嘴";
-    public const string Table = "桌子";
-    public const string Door = "房門";
-    public const string wardrobe = "衣櫃";
-    public const string Bed = "床";
-    public const string Document = "文件";
-    public const string Key = "鑰匙";
-    public const string Wallet = "錢包";
-    public const string Phone = "手機";
-    public const string Clothes = "衣服";
-    public const string MRT = "捷運";
+    public const string Alarm = "Alarm";
+    public const string Hand = "Hand";
+    public const string Foot = "Foot";
+    public const string Eyes = "Eyes";
+    public const string Mouth = "Mouth";
+    public const string Table = "Table";
+    public const string Door = "Door";
+    public const string Wardrobe = "Wardrobe";
+    public const string Bed = "Bed";
+    public const string Document = "Document";
+    public const string Key = "Key";
+    public const string Wallet = "Wallet";
+    public const string Phone = "Phone";
+    public const string Clothes = "Clothes";
+    public const string MRT = "MRT";
+    public const string Office = "Office";
+    public const string Home = "Home";
+    public const string Playground = "Playground";
+    public const string Shop = "Shop";
+    public const string Food = "Food";
+    public const string Warning = "Warning";
+    public const string CoWorker = "CoWorker";
+    public const string Computer = "Computer";
+    public const string Keyboard = "Keyboard";
+    public const string Email = "Email";
+    public const string Web = "Web";
+    public const string Unity = "Unity";
+    public const string Facebook = "Facebook";
+    public const string Twitch = "Twitch";
+    public const string Steam = "Steam";
+    public const string MicrosoftDocs = "MicrosoftDocs";
+    public const string Bug = "Bug";
+    public const string Error = "Error";
+    public const string Solution ="Solution";
+    public const string GlobalGameJamActivityInformation = "GlobalGameJamActivityInformation";
+    public const string GlobalGameJamLive = "GlobalGameJamLive";
+    public const string Game = "Game";
+    public const string AD = "AD";
+    public const string Message = "Message";
+    public const string DoneWork = "DoneWork"
+    public const string Project = "Project";
+    public const string Dream = "Dream";
+
 }
