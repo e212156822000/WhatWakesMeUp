@@ -9,6 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 
+#Mac grabage
+.DS_Store
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -51,6 +54,8 @@ ExportedObj/
 *.pdb.meta
 *.mdb.meta
 *.clip.meta
+*.png.meta
+*.jpg.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
