@@ -18,7 +18,35 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Eyes,
             secondItemName = ItemNameDictionary.Face,
-            generateItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.wardrobe, ItemNameDictionary.Table, ItemNameDictionary.Bed)
+            itemEvents = Face.GetFaceEvent(Face.ChangeWakeUpFace),
+            generateItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table, ItemNameDictionary.Bed)
+        },
+        new SyntheticItem
+        {
+            firstItemName = ItemNameDictionary.Table,
+            secondItemName = ItemNameDictionary.Eyes,
+            generateItemNames = GetListItems(ItemNameDictionary.Document, ItemNameDictionary.Wallet, ItemNameDictionary.Phone)
+        },
+        new SyntheticItem
+        {
+            firstItemName = ItemNameDictionary.Hand,
+            secondItemName = ItemNameDictionary.Wardrobe,
+            generateItemNames = GetListItems(ItemNameDictionary.Clothes)
+        },
+        new SyntheticItem
+        {
+            firstItemName = ItemNameDictionary.Clothes,
+            secondItemName = ItemNameDictionary.Face,
+            itemEvents = Face.GetFaceEvent(Face.ChangeNormalFace),
+            disappearItemNames = GetListItems(ItemNameDictionary.Clothes)
+        },
+        new SyntheticItem
+        {
+            firstItemName = ItemNameDictionary.Foot,
+            secondItemName = ItemNameDictionary.Door,
+            itemEvents = Face.GetFaceEvent(Face.ChangeNormalFace),
+            generateItemNames = GetListItems(ItemNameDictionary.Home),
+            disappearItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table)
         }
     };
 
