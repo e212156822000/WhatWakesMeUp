@@ -1,4 +1,6 @@
-﻿public class Eyes : ItemEventBasic
+﻿using UnityEngine;
+
+public class Eyes : ItemEventBasic
 {
     
 }

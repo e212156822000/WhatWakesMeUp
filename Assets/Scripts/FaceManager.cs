@@ -1,9 +1,12 @@
-﻿using UnityEngine.Events;
+﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class FaceManager : Singleton<FaceManager>
 {
     public Text face;
+    public AudioSource sounds;
+    public AudioClip needToGetWallet;
 
     public static UnityEvent GetFaceEvent(UnityAction call)
     {
@@ -20,6 +23,7 @@ public class FaceManager : Singleton<FaceManager>
     public void ChangeNormalFace()
     {
         ChangeFace("(o´ω`o)ﾉ");
+        PlayerState.isWearingClothes = true;
     }
 
     public void ChangeNormalFace2()
@@ -43,5 +47,6 @@ public class FaceManager : Singleton<FaceManager>
     public void ChangeDoubtFace()
     {
         ChangeFace("( ˘•ω•˘ ).oOஇ");
+        sounds.PlayOneShot(needToGetWallet);
     }
 }

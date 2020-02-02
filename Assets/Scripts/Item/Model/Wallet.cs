@@ -13,6 +13,9 @@ public class Wallet : ItemEventBasic
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.gameObject.activeSelf && !PlayerState.hasWallet)
+        {
+            PlayerState.hasWallet = true;
+        }
     }
 }

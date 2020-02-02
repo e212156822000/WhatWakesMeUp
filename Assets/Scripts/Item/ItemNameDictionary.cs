@@ -41,4 +41,5 @@
     public const string Bug = "Bug";
     public const string Food = "Food";
     public const string Error = "Error";
+    public const string Windows = "Windows";
 }

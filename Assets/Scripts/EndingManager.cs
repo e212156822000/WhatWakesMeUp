@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EndingManager : Singleton<EndingManager>
 {
     public bool startEnding = false;
+    public bool badEnd = false;
+    public bool trueEnd = false;
     public GameObject endingPic;
+    public GameObject trueEndingPic;
     public Vector3 originPos;
+
+    public GameObject badEndObj;
 
     float t;
     Vector3 startPosition;
@@ -29,6 +35,16 @@ public class EndingManager : Singleton<EndingManager>
             t += Time.deltaTime / timeToReachTarget;
             transform.position = Vector3.Lerp(startPosition, target, t);
             if (transform.position == target) startEnding = false;
+
+            if (badEnd)
+            {
+                badEndObj.SetActive(true);
+            }
+            else if (trueEnd)
+            {
+                trueEndingPic.SetActive(true);
+                AudioListener.pause = true;
+            }
         }
     }
 
@@ -43,5 +59,18 @@ public class EndingManager : Singleton<EndingManager>
         startPosition = transform.position;
         timeToReachTarget = time;
         target = destination;
+    }
+
+    public static UnityEvent GetEndEvent(UnityAction call)
+    {
+        UnityEvent endEvent = new UnityEvent();
+        endEvent.AddListener(call);
+        return endEvent;
+    }
+
+    public void GetTrueEnd()
+    {
+        startEnding = true;
+        trueEnd = true;
     }
 }

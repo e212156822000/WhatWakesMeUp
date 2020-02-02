@@ -33,7 +33,7 @@ public class HeadMovement : DragHandler
             float limitBottomBorder = 1.759657f;
             if (mousePosY < limitBottomBorder) mousePosY = limitBottomBorder;
             gameObject.transform.localPosition = new Vector3(headX, mousePosY, headZ);
-            if (mousePosY > 6f)
+            if (mousePosY > 4f)
             {
                 this.gameObject.SetActive(false);
                 foreach (var item in startItem)
