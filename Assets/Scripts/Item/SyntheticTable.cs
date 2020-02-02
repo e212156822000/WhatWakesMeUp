@@ -44,23 +44,22 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Foot,
             secondItemName = ItemNameDictionary.Door,
-            itemEvents = FaceManager.GetFaceEvent(FaceManager.Instance.ChangeNormalFace),
-            generateItemNames = GetListItems(ItemNameDictionary.Home),
+            generateItemNames = GetListItems(ItemNameDictionary.Home, ItemNameDictionary.MRT),
             disappearItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table)
         },
         new SyntheticItem
         {
             firstItemName = ItemNameDictionary.Foot,
             secondItemName = ItemNameDictionary.MRT,
-            generateItemNames = GetListItems(ItemNameDictionary.Office,ItemEventBasic.Playground,ItemEventBasic.Shop),
+            generateItemNames = GetListItems(ItemNameDictionary.Office,ItemNameDictionary.Playground,ItemNameDictionary.Shop)
         },
         new SyntheticItem
         {
             firstItemName = ItemNameDictionary.Foot,
             secondItemName = ItemNameDictionary.Home,
-            itemEvents = FaceManager.GetFaceEvent(FaceManager.Instance.ChangeNormalFace),
-            generateItemNames = GetListItems((ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table),
-            disappearItemNames = GetListItems(ItemNameDictionary.MRT,ItemEventBasic.Home)
+            itemEvents = FaceManager.GetFaceEvent(FaceManager.Instance.ChangeNormalFace2),
+            generateItemNames = GetListItems(ItemNameDictionary.Door, ItemNameDictionary.Wardrobe, ItemNameDictionary.Table),
+            disappearItemNames = GetListItems(ItemNameDictionary.MRT, ItemNameDictionary.Home)
         },
         new SyntheticItem
         {
@@ -78,8 +77,8 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.MRT,
             secondItemName = ItemNameDictionary.Office,
-            generateItemNames = GetListItems(ItemNameDictionary.CoWorker,ItemEventBasic.Computer),
-            disappearItemNames = GetListItems(ItemNameDictionary.MRT,ItemEventBasic.Shop,ItemEventBasic.Playground,ItemEventBasic.Home)
+            generateItemNames = GetListItems(ItemNameDictionary.CoWorker,ItemNameDictionary.Computer),
+            disappearItemNames = GetListItems(ItemNameDictionary.MRT,ItemNameDictionary.Shop,ItemNameDictionary.Playground,ItemNameDictionary.Home)
         },
         new SyntheticItem
         {
@@ -97,7 +96,7 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Hand,
             secondItemName = ItemNameDictionary.Keyboard,
-            generateItemNames = GetListItems(ItemNameDictionary.Email,ItemEventBasic.Web,ItemEventBasic.Unity)
+            generateItemNames = GetListItems(ItemNameDictionary.Email,ItemNameDictionary.Web,ItemNameDictionary.Unity)
         },
         new SyntheticItem
         {
@@ -110,7 +109,7 @@ public class SyntheticTable : MonoBehaviour
         {
             firstItemName = ItemNameDictionary.Keyboard,
             secondItemName = ItemNameDictionary.Web,
-            generateItemNames = GetListItems(ItemNameDictionary.Twitch,ItemEventBasic.Steam,ItemEventBasic.MicrosoftDocs)
+            generateItemNames = GetListItems(ItemNameDictionary.Twitch,ItemNameDictionary.Steam,ItemNameDictionary.MicrosoftDocs)
         },
         new SyntheticItem
         {
@@ -190,7 +189,7 @@ public class SyntheticTable : MonoBehaviour
             firstItemName = ItemNameDictionary.DoneWork,
             secondItemName = ItemNameDictionary.CoWorker,
             generateItemNames = GetListItems(ItemNameDictionary.Home)
-        },
+        }
     };
 
     public static List<string> GetListItems(params string[] itemNames)

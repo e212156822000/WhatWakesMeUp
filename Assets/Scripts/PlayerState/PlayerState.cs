@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlayerState : MonoBehaviour
 {
     public static bool isWearingClothes = false;
+    public static bool hasWallet = false;
 }

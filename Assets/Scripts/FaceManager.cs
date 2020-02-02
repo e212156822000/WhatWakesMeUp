@@ -39,4 +39,9 @@ public class FaceManager : Singleton<FaceManager>
             face.text = text;
         }
     }
+
+    public void ChangeDoubtFace()
+    {
+        ChangeFace("( ˘•ω•˘ ).oOஇ");
+    }
 }

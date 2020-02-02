@@ -7,8 +7,9 @@ public class ItemEventBasic : MonoBehaviour
 
     public void Awake()
     {
-        this.gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
-        this.gameObject.AddComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+        this.gameObject.AddComponent<PolygonCollider2D>();
+        this.gameObject.AddComponent<Rigidbody2D>().gravityScale = 0;
         this.gameObject.AddComponent<DragHandler>();
+        this.gameObject.AddComponent<RandomMovement>();
     }
 }

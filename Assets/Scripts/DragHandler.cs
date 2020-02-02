@@ -6,11 +6,16 @@ public class DragHandler : MonoBehaviour
 {
     private float startPositionX;
     private float startPositionY;
-    private bool isBeingHeld = false;
+    public bool isBeingHeld = false;
 
     void Update()
     {
-        if(isBeingHeld == true)
+        DragItem();
+    }
+
+    public void DragItem()
+    {
+        if (isBeingHeld)
         {
             Vector3 mousePos;
             mousePos = Input.mousePosition;
@@ -18,10 +23,14 @@ public class DragHandler : MonoBehaviour
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPositionX, mousePos.y - startPositionY, 0);
         }
     }
-    private void OnTriggerStay2D(Collider2D other)
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        ItemManager.firstClickedItem = this.gameObject;
-        ItemManager.secondClickedItem = other.gameObject;
+        if (isBeingHeld)
+        {
+            ItemManager.firstClickedItem = this.gameObject;
+            ItemManager.secondClickedItem = other.gameObject;
+        }
     }
     private void OnMouseDown()
     {
@@ -39,7 +48,6 @@ public class DragHandler : MonoBehaviour
     private void OnMouseUp()
     {
         isBeingHeld = false;
-        //Debug.Log(ItemManager.firstClickedItem.name);
-        //Debug.Log(ItemManager.secondClickedItem.name);
+        this.gameObject.tag = "Change";
     }
 }

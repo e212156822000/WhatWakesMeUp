@@ -8,6 +8,7 @@ public class Alarm : ItemEventBasic
     void Start()
     {
         this.gameObject.name = ItemNameDictionary.Alarm;
+        ringSound = this.gameObject.GetComponent<AudioSource>();
         RingRing(true);
         itemEvent.AddListener(StopAlarmEvent);
     }
@@ -30,6 +31,7 @@ public class Alarm : ItemEventBasic
         {
             if (play)
             {
+                ringSound.loop = true;
                 ringSound.Play();
             }
             else

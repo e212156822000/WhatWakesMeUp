@@ -38,4 +38,7 @@
     public const string GlobalGameJamActivityInformation = "GlobalGameJamActivityInformation";
     public const string GlobalGameJamLive = "GlobalGameJamLive";
     public const string Dream = "Dream";
+    public const string Bug = "Bug";
+    public const string Food = "Food";
+    public const string Error = "Error";
 }

@@ -8,7 +8,9 @@ public class MRT : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.name = ItemNameDictionary.MRT;   
+        this.gameObject.name = ItemNameDictionary.MRT;
+        policeSound = this.gameObject.GetComponent<AudioSource>();
+        startEnd = true;
     }
 
     // Update is called once per frame
@@ -18,18 +20,13 @@ public class MRT : MonoBehaviour
         {
             FaceManager.Instance.ChangeNormalFace2();
         }
-        else if (!startEnd && !PlayerState.isWearingClothes)
+        else if (startEnd && !PlayerState.isWearingClothes)
         {
+            policeSound.loop = true;
             policeSound.Play();
             FaceManager.Instance.ChangeTerrifyFace();
-            PlayEndEvent();
-            this.gameObject.SetActive(false);
+            EndingManager.Instance.PlayEndEvent();
             startEnd = false;
         }
-    }
-
-    public void PlayEndEvent()
-    {
-
     }
 }
